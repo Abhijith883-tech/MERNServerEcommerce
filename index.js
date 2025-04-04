@@ -169,10 +169,13 @@ require("./database/dbConnection");
 const pfServer = express();
 
 // ✅ CORS configuration for Vercel frontend
+
+
 pfServer.use(cors({
-  origin: ["https://your-vercel-app.vercel.app", "http://localhost:5173"], // Replace with your actual Vercel frontend URL
-  credentials: true,
+  origin: ["https://mern-iota-ecru.vercel.app", "http://localhost:5173"], // Add your Vercel frontend URL here
+  credentials: true, // Required if you're using cookies or sessions
 }));
+
 
 pfServer.use(express.json());
 pfServer.use(router);
