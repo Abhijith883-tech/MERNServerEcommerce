@@ -54,7 +54,8 @@ const menSchema = new mongoose.Schema({
     Image2: { type: String, required: true },
     Image3: { type: String, required: true },
     Image4: { type: String, required: true },
-    stock: { type: Number, required: true, min: 0 } // Stock count field
+    stock: { type: Number, required: true, min: 0 }, // Stock count field
+    typeDress: { type: String, required: true }
 });
 
 const men = mongoose.model("Men", menSchema);
